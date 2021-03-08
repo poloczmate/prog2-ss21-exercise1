@@ -17,4 +17,9 @@ public class AppTest {
         String toCheck = "AbC12(asdasdAbC12(asdasdAbC12(asdasdAbC12(asdasd";
         assertFalse(App.checkPassword(toCheck));
     }
+    @Test
+    public void number_test_1(){
+        String toCheck = "AbCwefsdgs(asdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
 }
