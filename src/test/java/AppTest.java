@@ -42,4 +42,34 @@ public class AppTest {
         String toCheck = "AbCwefsdgsasdasd+";
         assertFalse(App.checkPassword(toCheck));
     }
+    @Test
+    public void continuous_numbers_1(){
+        String toCheck = "AbC123(asdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void continuous_numbers_2(){
+        String toCheck = "AbC6789(asdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void continuous_numbers_3(){
+        String toCheck = "AbC69(asdasd678";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void same_numbers_1(){
+        String toCheck = "AbC69(asdasd6666";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void same_numbers_2(){
+        String toCheck = "1111AbC69(asdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void same_numbers_3(){
+        String toCheck = "AbC6666(asdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
 }
