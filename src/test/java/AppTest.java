@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+//Github repo:
+//https://github.com/poloczmate/prog2-ss21-exercise1
+
 public class AppTest {
     @Test
     public void test_length_1(){
