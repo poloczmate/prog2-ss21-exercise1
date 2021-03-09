@@ -22,4 +22,24 @@ public class AppTest {
         String toCheck = "AbCwefsdgs(asdasd";
         assertFalse(App.checkPassword(toCheck));
     }
+    @Test
+    public void no_ziffer(){
+        String toCheck = "AbCwefsdgsasdasd";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void no_lower(){
+        String toCheck = "ABCDDJHFSKNKL(";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void no_upper(){
+        String toCheck = "sdgjbsgkndmsnb(";
+        assertFalse(App.checkPassword(toCheck));
+    }
+    @Test
+    public void wrong_ziffer(){
+        String toCheck = "AbCwefsdgsasdasd+";
+        assertFalse(App.checkPassword(toCheck));
+    }
 }
